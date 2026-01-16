@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tetris 40 Lines - Complete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="info-panel">
+            <div class="info-box">
+                <h3>TIME</h3>
+                <div id="time">00:00.00</div>
+            </div>
+            <div class="info-box accent">
+                <h3>REMAINING</h3>
+                <div id="remaining">40</div>
+            </div>
+            <div class="info-box">
+                <h3>HOLD</h3>
+                <canvas id="hold-canvas" width="80" height="80"></canvas>
+            </div>
+        </div>
+        
+        <canvas id="game-board" width="300" height="600"></canvas>
+
+        <div id="next-panel">
+            <div class="info-box">
+                <h3>NEXT</h3>
+                <div id="next-container">
+                    <canvas id="next-canvas-1" width="60" height="60"></canvas>
+                    <canvas id="next-canvas-2" width="50" height="50"></canvas>
+                    <canvas id="next-canvas-3" width="50" height="50"></canvas>
+                    <canvas id="next-canvas-4" width="50" height="50"></canvas>
+                    <canvas id="next-canvas-5" width="50" height="50"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-controls">
+        <div class="control-row">
+            <button id="btn-left" class="control-btn">←</button>
+            <button id="btn-hold" class="control-btn">HOLD</button>
+            <button id="btn-right" class="control-btn">→</button>
+        </div>
+        <div class="control-row">
+            <button id="btn-rotate-left" class="control-btn">左回転</button>
+            <button id="btn-rotate-right" class="control-btn">右回転</button>
+        </div>
+        <div class="control-row">
+            <button id="btn-hard-drop" class="control-btn hard-drop">HARD DROP</button>
+        </div>
+    </div>
+    <div id="game-controls">
+    <div class="control-row">
+        <button id="btn-left" class="control-btn">← 左移動</button>
+        <button id="btn-hold" class="control-btn">HOLD (X)</button>
+        <button id="btn-right" class="control-btn">右移動 →</button>
+    </div>
+    <div class="control-row">
+        <button id="btn-rotate-left" class="control-btn">左回転 (Q)</button>
+        <button id="btn-rotate-right" class="control-btn">右回転 (W/↑)</button>
+    </div>
+    <div class="control-row">
+        <button id="btn-hard-drop" class="control-btn hard-drop">HARD DROP (Space)</button>
+    </div>
+</div>
+
+    <div id="game-over-screen" class="hidden">
+        <div class="modal">
+            <h1>FINISH!</h1>
+            <p>TIME: <span id="final-score">00:00.00</span></p>
+            <button class="retry-btn" onclick="location.reload()">RETRY</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
